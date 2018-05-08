@@ -1,12 +1,6 @@
--   [**MOVords**](#MOVords)
-    -   [Installation](#installation)
-    -   [Example Usage](#example-usage)
-    -   [**MOVpca**](#MOVpca)
-    -   [**MOVpnmds**](#MOVpnmds)
-    -   [License](#license)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-**MOVords**
+**MOVtools**
 ==========
 
 The package provides six functions: `MOVpca()`, `MOVca()`, `MOVpcoa()`, `MOVnmds()`, `MOVrda()`, `MOVcca()`. You can customize the display labels and themes. Labels can contain formulas. Image themes can be set by themes in ggplots or by other packages(ggthemr).
@@ -14,12 +8,12 @@ The package provides six functions: `MOVpca()`, `MOVca()`, `MOVpcoa()`, `MOVnmds
 Usage
 ------------
 Copy these R files into your working dictionary
+source('name_list')
 
 Example Usage
 -------------
 
 ``` r
-library(MOVords)
 require(vegan)
 #> Loading required package: vegan
 #> Loading required package: permute
@@ -73,12 +67,12 @@ MOVpca(Chemin.pca, group = grl, spacol = "white") + theme_dark()
 
 <img src="README-unnamed-chunk-8-1.png" style="display: block; margin: auto;" />
 
-### 6. Set a theme (use MOVthemr packages, more themes in MOVthemer)
+### 6. Set a theme (use ggthemr packages, more themes in ggthemer)
 
 [](https://github.com/cttobin/ggthemr)
 
 ``` r
-library(MOVthemr)
+library(ggthemr)
 
 chalk_theme <- ggthemr('chalk', set_theme = FALSE)
 fd_theme <- ggthemr('flat dark', set_theme = FALSE)
@@ -267,7 +261,4 @@ MOVnmds(Chemin.nmds, group = grl, spearrow = NULL, ellipse = TRUE) +
 
 <img src="README-unnamed-chunk-21-1.png" style="display: block; margin: auto;" />
 
-License
--------
 
-Released under GPL-3.
